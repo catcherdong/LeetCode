@@ -23,15 +23,15 @@ public:
 
         //return i;
 
-		int n = x ^ y;
-		int dist = 0;
+	int n = x ^ y;
+	int dist = 0;
 
-		while (n){
-			++dist;
-			n &= n - 1;
-		}
+	while (n){
+		++dist;
+		n &= n - 1;
+	}
 
-		return dist;
+	return dist;
     }
 };
 
