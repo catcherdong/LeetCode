@@ -2,22 +2,36 @@
 //2017.07.29
 //Author : catcherdong
 
+//update
+//2017.07.29
+//dicrease loops times
+
 #include <iostream>
 
 class Solution {
 public:
     int hammingDistance(int x, int y) {
         
-        int temp = x ^ y;
+        //int temp = x ^ y;
 
-        int i = 0, t = 0;
+        //int i = 0, t = 0;
 
-        for(t = 0; t < 32; t++)
-        if(((temp >> t) & 1) == 1){
-            i++;
-        }
+        //for(t = 0; t < 32; t++)
+        //if(((temp >> t) & 1) == 1){
+        //    i++;
+        //}
 
-        return i;
+        //return i;
+
+		int n = x ^ y;
+		int dist = 0;
+
+		while (n){
+			++dist;
+			n &= n - 1;
+		}
+
+		return dist;
     }
 };
 
@@ -29,7 +43,7 @@ int main(){
   Solution * sol = new Solution;
   
   std::cout << "input two number" << std::endl;  
-  std::cin << a << b;
+  std::cin >> a >> b;
   
   res = sol->hammingDistance(a,b);
   
