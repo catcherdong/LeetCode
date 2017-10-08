@@ -6,6 +6,8 @@
 //2017.07.29
 //dicrease loops times
 
+//test github
+
 #include <iostream>
 
 class Solution {
